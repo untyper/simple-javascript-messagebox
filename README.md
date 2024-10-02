@@ -133,10 +133,10 @@
     }
 
     // Synchronous message box function
-    window.messageBox = function(message = '', buttons = {
+    const messageBox = (message = '', buttons = {
       // Default button w/event handler
       'OK': (event) => {}
-    }) {
+    }) => {
       const mb = new MessageBox(message);
 
       // Add multiple buttons to message box:
@@ -148,7 +148,7 @@
         // Add button and callback to message box
         mb.button(button, callback);
       }
-    }
+    };
   </script>
 ```
 
